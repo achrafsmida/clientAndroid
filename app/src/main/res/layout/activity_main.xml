@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout7"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Panier"
+            android:id="@+id/btn_panier"
+            android:textAllCaps="false"
+            android:layout_below="@+id/linearLayout7"
+            android:layout_alignLeft="@+id/btn_commande"
+            android:layout_alignStart="@+id/btn_commande"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Votre commande"
+            android:id="@+id/btn_commande"
+            android:layout_below="@+id/btn_historique"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adresse de livraison"
+            android:id="@+id/btn_livraison"
+            android:textAllCaps="false"
+            android:layout_below="@+id/btn_panier"
+            android:layout_alignLeft="@+id/btn_historique"
+            android:layout_alignStart="@+id/btn_historique"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Historique des commandes + alert details"
+            android:id="@+id/btn_historique"
+            android:textAllCaps="false"
+            android:layout_below="@+id/btn_livraison"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="liste des restaurants"
+            android:textAllCaps="false"
+            android:id="@+id/btn_restos"
+            android:layout_below="@+id/btn_commande"
+            android:layout_alignLeft="@+id/btn_historique"
+            android:layout_alignStart="@+id/btn_historique"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="details restaurant"
+            android:textAllCaps="false"
+            android:id="@+id/btn_resto"
+            android:layout_below="@+id/btn_restos"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="S&apos;inscrire"
+            android:id="@+id/btn_inscrire"
+            android:layout_below="@+id/btn_resto"
+            android:layout_alignLeft="@+id/btn_resto"
+            android:layout_alignStart="@+id/btn_resto"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="login"
+            android:textAllCaps="false"
+            android:id="@+id/btn_login"
+            android:layout_below="@+id/btn_inscrire"
+            android:layout_alignRight="@+id/btn_resto"
+            android:layout_alignEnd="@+id/btn_resto"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="cart + alert"
+            android:id="@+id/btn_cart"
+            android:layout_above="@+id/linearLayout7"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="suivi"
+            android:id="@+id/btn_suivi"
+            android:layout_above="@+id/linearLayout7"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#2d2e2e"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:itemBackground="@drawable/drawer_item_bg"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+
+</android.support.v4.widget.DrawerLayout>
